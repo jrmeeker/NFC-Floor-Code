@@ -1923,6 +1923,9 @@ void main(int argc, char **argv)
 										   DisplayResults(ResultBL, LISTENER_TEST_COUNT);
 									   }
 
+									   printf("\nPress Enter to run resonant frequency test...\n\n");
+									   getchar();
+
 									   printf("\nMeasuring resonant frequency...\n\n");
 
 									   ret = MPC_ResonanceFrequencyVS(CPL0, OFF, 0, 5000, 0, 11000000, 19000000, &dwResf, &dwQFactor);
@@ -1944,7 +1947,7 @@ void main(int argc, char **argv)
 									   }
 
 									   TimeEnd = GetTimeMs64();
-									   printf("Time elapsed in batch = %ldms\r\n", TimeEnd - TimeStart);
+									  // printf("Time elapsed in batch = %ldms\r\n", TimeEnd - TimeStart);
 
 									   break;
 							}
@@ -2098,6 +2101,9 @@ void main(int argc, char **argv)
 
 								}
 
+								printf("\nPress Enter to run resonant frequency test...\n\n");
+								getchar();
+
 								printf("\nMeasuring resonant frequency...\n\n");
 
 								ret = MPC_ResonanceFrequencyVS(CPL0, OFF, 0, 5000, 0, 11000000, 19000000, &dwResf, &dwQFactor);
@@ -2123,7 +2129,7 @@ void main(int argc, char **argv)
 								}
 
 								TimeEnd = GetTimeMs64();
-								printf("Time elapsed in batch = %ldms\r\n", (TimeEnd - TimeStart));
+								//printf("Time elapsed in batch = %ldms\r\n", (TimeEnd - TimeStart));
 
 								break;
 							}
